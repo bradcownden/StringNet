@@ -154,19 +154,19 @@ For the open string, the first boundary term is usually handled by the standard 
 \be
 \delta \lI \X(\tau, \sigma_n) = \delta \lJ \X(\tau, \sigma_n) =: \delta \X_n(\tau)  \qquad \forall I \cap J = n,
 \ee
-in order that they remain connected. Using this, and collecting the contributions at each node, we write the second boundary condition
+in order that they remain connected; $\delta \X_n(\tau)$ itself is arbitrary. Using this, and collecting the contributions at each node, we write this boundary term as
 \be
-\label{BC2}
 \sum_n \left( \sum_{I:I\cap n \ne 0} \cos(\lI \sigma_n) \lI \X'(\tau, \sigma_n)\right) \cdot \delta \X_n = 0,
 \ee
 using a prime to denote a derivative with respect to $\lI \sigma$, and the $\cos$ factor is $+1$ for outgoing strings and $-1$ for ingoing strings.
-We see that this vanishes as long as the \textit{oriented sum} of derivatives $\lI \X'$ vanishes at each node, i.e. the sum of ingoing tangent vectors equals the sum of outgoing tangent vectors. This is a generalization of Neumann boundary conditions which require each derivative to vanish \textit{separately}. One is also free to fix the position of a node to be on a D-brane, using Dirichlet boundary conditions $\delta X^\mu_n = 0$ for some or all of the spatial coordinates $\mu = 1, \ldots, 25$. Notice that this implies the total current flowing into a node is equal to the current flowing out of the node (see Zwiebach (16.23) and above).
-
-For the second boundary term, we add a counter boundary term to the action of each string:
+We see that this vanishes as long as the \textit{oriented sum} of derivatives $\lI \X'$ vanishes at each node, i.e. the sum of ingoing tangent vectors equals the sum of outgoing tangent vectors, i.e.
 \be
-\frac{1}{4} \int d \tau \left[ B_{\mu \nu} \lI \dot{X}^\mu \lI X^\nu \right]_0^{\pi}
+\label{BC2}
+\sum_{I:I\cap n \ne 0} \cos(\lI \sigma_n) \lI \X'(\tau, \sigma_n) = 0
 \ee
-Under variations of $B_{\mu \nu}$ we need this to vanish. Since $B_{\mu \nu}$ must be single valued at a node, and because $\lI \dot{X}^\mu$ and $\lI X^\nu$ are the same for all strings meeting at a node, it looks like the only way to make this happen is to have as many ingoing strings as outgoing strings.
+This is a generalization of Neumann boundary conditions which require each derivative to vanish \textit{separately}. One is also free to fix the position of a node to be on a D-brane, using Dirichlet boundary conditions $\delta X^\mu_n = 0$ for some or all of the spatial coordinates $\mu = 1, \ldots, 25$. Notice that this implies the total current flowing into a node is equal to the current flowing out of the node (see Zwiebach (16.23) and above).
+
+For the second boundary term, we add a counter boundary term, the contribution from each string is the same, up to a sign depending on whether it is ingoing or outgoing. The only way I can see to make this vanish is if we require as many ingoing strings as outgoing strings.
 
 As long as the above boundary conditions are met, the strings are guaranteed to remain connected as time evolves. The equation of motion for each string is
 \be
@@ -230,3 +230,4 @@ These are the sine modes which do not wiggle the nodes. The usual Dirichlet boun
 \end{thebibliography}
 
 \end{document}
+
