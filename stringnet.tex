@@ -108,6 +108,7 @@ We present new solutions to the Polyakov action, constructed upon graphs, which 
 \section{Classical theory on a graph}
 Bosonic string theory is defined by the Polyakov action, along with extra terms to include the antisymmetric $B$-field.
 \be
+\label{poly action}
 S = - \frac{1}{4 \pi \alpha^\prime} \int d\tau d\sigma \partial_a X^\mu \cdot \partial^a X_\mu 
 - \frac{1}{2} \int d\tau d\sigma B_{\mu \nu} \partial_\tau X^\mu \partial_\sigma X^\nu
 - \frac{1}{6 \kappa^2} \int d^{26} x H_{\mu \nu \rho} H^{\mu \nu \rho} .
@@ -213,6 +214,43 @@ For the excitations we have at each $k$ that
 \sum_{I : I \cap n \ne 0} \left( \lI \a_k - \lI \b_k \right)  \cos k \sigma_n = 0. 
 \ee
 These are the sine modes which do not wiggle the nodes. The usual Dirichlet boundary conditions require each term to vanish separately, but here we require only that the total sum vanishes. This is what permits novel excitations which are not allowed on a single string.
+
+\subsection{Lightcone Quantization}
+Consider applying the boundary conditions to some node $n$ where $N$ strings are incoming and $M$ strings are outgoing. In this case, when \eqref{BC1} is applied to $\X_0$ at $\tau = 0$ we have
+\be
+\sum^N_{I = 1} \lI \q + \pi \alpha' \, \lI \m = \sum^M_{J = 1}  \lJ \q \qquad \forall \ I \cap J = n .
+\ee
+When $t > 0$, the same boundary condition still applies; we can use the result above to simplify the $\tau > 0$ condition to
+\be
+\sum^N_{I = 1} \lI \p = \sum^M_{J=1} \lJ \p \qquad \forall \ \{I,J\} \in \Gamma .
+\ee
+Furthermore, \eqref{BC1} provides a restriction on the oscillators:
+\be
+\sum^N_{I=1} \sum^M_{J=1} \sum_{k \neq 0} \frac{e^{-ik \tau}}{k} \left( (-1)^{k+1} ( \lI \a_k + \lI \b_k) + \lJ \a_k + \lJ \b_k \right) = 0 \qquad \forall \ \{I,J\} \in \Gamma .
+\ee
+Applying the second boundary condition, \eqref{BC2}, to the zero mode $\X_0$ results in a trivial condition. When applied to the oscillators, we have that
+\be
+\sum_n \left[ \sum_{I=1}^N \sum_{J=1}^M \sum_{k \neq 0} e^{-ik\tau} \left( (-1)^{k+1} (\lI \a_k - \lI \b_k) + \lJ \a_k - \lJ \b_k \right) \right] = 0 \qquad \forall \ \{I,J\} \in \Gamma.
+\ee
+
+Without any fields that couple to the metric, the stress-energy tensor $T_{ab}$ can be computed from the action \eqref{poly action} and must be zero. This leads to the conditions
+\be
+\label{T cond1}
+T_{01} &=& \sum_{I: I \cap n \neq 0} \partial_\tau \lI \X \,  \partial_\sigma \lI \X = 0 , \\
+\label{T cond2}
+T_{00} = T_{11} &=& \frac{1}{2} \sum_{I: I \cap n \neq 0} \left( \partial_\tau \lI\X\right)^2 + \left(\partial_\sigma \lI\X \right)^2 = 0.
+\ee
+In terms of the worldsheet coordinates $\{u, v\}$, \eqref{T cond1}~\!--~\!\eqref{T cond2} reduce to 
+\be
+\label{T cond}
+\sum_{I: I \cap n \neq 0} \left( \partial_u \lI \X \right)^2 = \sum_{I: I \cap n \neq 0} \left( \partial_v \lI \X \right)^2 = 0\ .
+\ee
+Consider the partial derivative of $\X(u,v,)$ with respect to $u$: Since $\partial_u \L(v) = 0$, we are left with
+\be
+\partial_u \X(u,v) &=& \partial_u \X_0 + \partial_u \R(u) \nonumber \\
+			  &=& \alpha' ({\bm p} - {\bm m} ) + \sqrt{\frac{\alpha'}{2}}\sum_{k \neq 0} \a_k e^{-ik u} \nonumber \\
+			  &\equiv& \sqrt{\frac{\alpha'}{2}} \sum_k \a_k e^{-iku} \qquad \text{where} \quad \a_0 = \sqrt{2\alpha'} ({\bm p} - {\bm m}) \, .
+\ee
 
 
 \begin{acknowledgments}
